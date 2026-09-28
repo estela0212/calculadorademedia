@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background: #faf2f8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    color: #27212c;
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+}
+
+
+/* LADO ESQUERDO */
+
+.texto {
+    max-width: 520px;
+}
+
+.pequeno {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    color: #765578;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.pequeno::before {
+    content: "";
+
+    width: 55px;
+    height: 2px;
+
+    background: #b98288;
+}
+
+
+h1 {
+    font-family: Georgia, serif;
+
+    font-size: 68px;
+    line-height: 0.95;
+
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+.texto p {
+    color: #765f77;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 500px;
+}
+
+
+/* DETALHES */
+
+.detalhes {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 45px;
+
+    color: #765578;
+
+    font-size: 15px;
+}
+
+
+/* CALCULADORA */
+
+.calculadora {
+    width: 520px;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(100, 70, 100, 0.12);
+}
+
+
+/* TÍTULO */
+
+.titulo {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.subtitulo {
+    color: #765578;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    margin-top: 12px;
+}
+
+.limite {
+    padding: 12px 17px;
+
+    background: #f0e5f0;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+}
+
+
+/* CAMPOS */
+
+.notas {
+    display: flex;
+
+    gap: 15px;
+}
+
+.campo {
+    flex: 1;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 17px 12px;
+
+    border: 1px solid #d8c9dc;
+
+    border-radius: 15px;
+
+    background: #fcf8fc;
+
+    font-size: 18px;
+
+    outline: none;
+
+    text-align: center;
+}
+
+.campo input:focus {
+    border-color: #719da2;
+
+    box-shadow:
+        0 0 0 3px rgba(113, 157, 162, 0.12);
+}
+
+
+/* BOTÃO */
+
+#btnCalcular {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #719da2;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#btnCalcular:hover {
+    background: #5e898e;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESULTADO */
+
+.resultado {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: #f7eff7;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.resultado span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #765f77;
+
+    font-size: 14px;
+}
+
+.resultado strong {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    color: #302531;
+}
+
+
+/* BOTÃO LIMPAR */
+
+.limpar {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #765f77;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.limpar:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+
+        gap: 45px;
+    }
+
+    .texto {
+        max-width: 600px;
+
+        text-align: center;
+    }
+
+    .pequeno {
+        justify-content: center;
+    }
+
+    .texto p {
+        margin: auto;
+    }
+
+    .detalhes {
+        justify-content: center;
+    }
+
+    .calculadora {
+        width: 100%;
+
+        max-width: 550px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .calculadora {
+        padding: 25px;
+    }
+
+    .notas {
+        flex-direction: column;
+    }
+}

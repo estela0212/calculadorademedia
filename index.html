@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nota Certa - Calculadora de Média</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- LADO ESQUERDO -->
+        <section class="texto">
+
+            <div class="pequeno">
+                SEU RESULTADO COMEÇA AQUI
+            </div>
+
+            <h1>
+                Descubra sua<br>
+                média final.
+            </h1>
+
+            <p>
+                Digite as três notas do aluno e deixe a conta com a gente.
+                O resultado aparece na hora, de um jeito claro e fácil de entender.
+            </p>
+
+            <div class="detalhes">
+                <span>Rápido</span>
+                <span>•</span>
+                <span>Simples</span>
+                <span>•</span>
+                <span>Preciso</span>
+            </div>
+
+        </section>
+
+
+        <!-- CALCULADORA -->
+        <section class="calculadora">
+
+            <div class="titulo">
+
+                <div>
+                    <span class="subtitulo">
+                        BOLETIM DO ALUNO
+                    </span>
+
+                    <h2>
+                        Calcule sua média
+                    </h2>
+                </div>
+
+                <span class="limite">
+                    0–10
+                </span>
+
+            </div>
+
+
+            <!-- NOTAS -->
+            <div class="notas">
+
+                <div class="campo">
+
+                    <label for="nota1">
+                        Nota 1
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota1"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="0,0"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="nota2">
+                        Nota 2
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota2"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="0,0"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="nota3">
+                        Nota 3
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota3"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        placeholder="0,0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+            <button id="btnCalcular">
+                Calcular média →
+            </button>
+
+
+            <!-- RESULTADO -->
+            <div
+                class="resultado"
+                id="resultado"
+            >
+
+                <span>
+                    Sua média final é:
+                </span>
+
+                <strong id="media">
+                    0,0
+                </strong>
+
+            </div>
+
+
+            <!-- LIMPAR -->
+            <button
+                class="limpar"
+                id="btnLimpar"
+            >
+                ↻ &nbsp; Limpar campos
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
